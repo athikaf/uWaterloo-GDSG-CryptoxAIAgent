@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize Web3 connection using Avalanche Fuji C-Chain URL
-fuji_url = f'https://avalanche-fuji.infura.io/v3/bbbfbb452049447eaf52c4cc6e48efaf'  # Use Avalanche Fuji C-Chain URL
+fuji_url = f'https://avalanche-fuji.infura.io/v3/{os.getenv("AVALANCHE_API_KEY")}'  # Use Avalanche Fuji C-Chain URL
 w3 = Web3(Web3.HTTPProvider(fuji_url))
 
 # Check if the connection is successful
